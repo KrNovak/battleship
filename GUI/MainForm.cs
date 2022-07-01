@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,11 +19,11 @@ namespace GUI
         {
             InitializeComponent();
         }
-        private async void CreateFleet()  //async
+        private void CreateFleet()  //async
         {
             myFleet = shipwright.CreateFleet();
+            Thread.Sleep(100); //da izbjegnem generiranje identičnih flota za oba igrača
             gunnery = new Gunnery(10, 10, new int[] { 5, 4, 4, 3, 3, 3, 2, 2, 2, 2 });
-            await Task.Delay(250); //da izbjegnem generiranje identičnih flota za oba igrača
             enemyFleet = shipwright.CreateFleet();
         }
         
@@ -182,6 +183,7 @@ namespace GUI
             }                                     //no nakon isteka vremena sve radi i igra teče uredno
 
         }
+
 
         private void VerifyPlacementButton_Click(object sender, EventArgs e)
         {
