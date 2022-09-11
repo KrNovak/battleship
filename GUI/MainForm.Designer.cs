@@ -45,9 +45,10 @@
             // 
             // PlaceFleetButton
             // 
-            this.PlaceFleetButton.Location = new System.Drawing.Point(300, 426);
+            this.PlaceFleetButton.Location = new System.Drawing.Point(400, 524);
+            this.PlaceFleetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PlaceFleetButton.Name = "PlaceFleetButton";
-            this.PlaceFleetButton.Size = new System.Drawing.Size(75, 23);
+            this.PlaceFleetButton.Size = new System.Drawing.Size(100, 28);
             this.PlaceFleetButton.TabIndex = 2;
             this.PlaceFleetButton.Text = "Place Fleet";
             this.PlaceFleetButton.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // StartButton
             // 
             this.StartButton.Enabled = false;
-            this.StartButton.Location = new System.Drawing.Point(390, 426);
+            this.StartButton.Location = new System.Drawing.Point(520, 524);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(75, 23);
+            this.StartButton.Size = new System.Drawing.Size(100, 28);
             this.StartButton.TabIndex = 3;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -67,72 +69,80 @@
             // MyFleetLabel
             // 
             this.MyFleetLabel.AutoSize = true;
-            this.MyFleetLabel.Location = new System.Drawing.Point(32, 55);
+            this.MyFleetLabel.Location = new System.Drawing.Point(43, 68);
+            this.MyFleetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MyFleetLabel.Name = "MyFleetLabel";
-            this.MyFleetLabel.Size = new System.Drawing.Size(47, 13);
+            this.MyFleetLabel.Size = new System.Drawing.Size(58, 16);
             this.MyFleetLabel.TabIndex = 4;
             this.MyFleetLabel.Text = "My Fleet";
             // 
             // EvidenceLabel
             // 
             this.EvidenceLabel.AutoSize = true;
-            this.EvidenceLabel.Location = new System.Drawing.Point(387, 55);
+            this.EvidenceLabel.Location = new System.Drawing.Point(516, 68);
+            this.EvidenceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EvidenceLabel.Name = "EvidenceLabel";
-            this.EvidenceLabel.Size = new System.Drawing.Size(69, 13);
+            this.EvidenceLabel.Size = new System.Drawing.Size(85, 16);
             this.EvidenceLabel.TabIndex = 5;
             this.EvidenceLabel.Text = "My Evidence";
             // 
             // enemyLastTargetLabel
             // 
             this.enemyLastTargetLabel.AutoSize = true;
-            this.enemyLastTargetLabel.Location = new System.Drawing.Point(100, 33);
+            this.enemyLastTargetLabel.Location = new System.Drawing.Point(133, 41);
+            this.enemyLastTargetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.enemyLastTargetLabel.Name = "enemyLastTargetLabel";
-            this.enemyLastTargetLabel.Size = new System.Drawing.Size(60, 13);
+            this.enemyLastTargetLabel.Size = new System.Drawing.Size(72, 16);
             this.enemyLastTargetLabel.TabIndex = 6;
             this.enemyLastTargetLabel.Text = "Last target:";
             // 
             // myShipsLabel
             // 
             this.myShipsLabel.AutoSize = true;
-            this.myShipsLabel.Location = new System.Drawing.Point(190, 33);
+            this.myShipsLabel.Location = new System.Drawing.Point(253, 41);
+            this.myShipsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.myShipsLabel.Name = "myShipsLabel";
-            this.myShipsLabel.Size = new System.Drawing.Size(53, 13);
+            this.myShipsLabel.Size = new System.Drawing.Size(64, 16);
             this.myShipsLabel.TabIndex = 7;
             this.myShipsLabel.Text = "Ships left:";
             // 
             // mySquaresLabel
             // 
             this.mySquaresLabel.AutoSize = true;
-            this.mySquaresLabel.Location = new System.Drawing.Point(280, 33);
+            this.mySquaresLabel.Location = new System.Drawing.Point(373, 41);
+            this.mySquaresLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mySquaresLabel.Name = "mySquaresLabel";
-            this.mySquaresLabel.Size = new System.Drawing.Size(66, 13);
+            this.mySquaresLabel.Size = new System.Drawing.Size(81, 16);
             this.mySquaresLabel.TabIndex = 8;
             this.mySquaresLabel.Text = "Squares left:";
             // 
             // myLastTargetLabel
             // 
             this.myLastTargetLabel.AutoSize = true;
-            this.myLastTargetLabel.Location = new System.Drawing.Point(460, 33);
+            this.myLastTargetLabel.Location = new System.Drawing.Point(613, 41);
+            this.myLastTargetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.myLastTargetLabel.Name = "myLastTargetLabel";
-            this.myLastTargetLabel.Size = new System.Drawing.Size(60, 13);
+            this.myLastTargetLabel.Size = new System.Drawing.Size(72, 16);
             this.myLastTargetLabel.TabIndex = 9;
             this.myLastTargetLabel.Text = "Last target:";
             // 
             // enemyShipsLabel
             // 
             this.enemyShipsLabel.AutoSize = true;
-            this.enemyShipsLabel.Location = new System.Drawing.Point(550, 33);
+            this.enemyShipsLabel.Location = new System.Drawing.Point(733, 41);
+            this.enemyShipsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.enemyShipsLabel.Name = "enemyShipsLabel";
-            this.enemyShipsLabel.Size = new System.Drawing.Size(53, 13);
+            this.enemyShipsLabel.Size = new System.Drawing.Size(64, 16);
             this.enemyShipsLabel.TabIndex = 10;
             this.enemyShipsLabel.Text = "Ships left:";
             // 
             // enemySquaresLabel
             // 
             this.enemySquaresLabel.AutoSize = true;
-            this.enemySquaresLabel.Location = new System.Drawing.Point(640, 33);
+            this.enemySquaresLabel.Location = new System.Drawing.Point(853, 41);
+            this.enemySquaresLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.enemySquaresLabel.Name = "enemySquaresLabel";
-            this.enemySquaresLabel.Size = new System.Drawing.Size(66, 13);
+            this.enemySquaresLabel.Size = new System.Drawing.Size(81, 16);
             this.enemySquaresLabel.TabIndex = 11;
             this.enemySquaresLabel.Text = "Squares left:";
             // 
@@ -140,26 +150,30 @@
             // 
             this.evidenceGridControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.evidenceGridControl1.Enabled = false;
-            this.evidenceGridControl1.Location = new System.Drawing.Point(390, 60);
+            this.evidenceGridControl1.Location = new System.Drawing.Point(520, 74);
+            this.evidenceGridControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.evidenceGridControl1.Name = "evidenceGridControl1";
-            this.evidenceGridControl1.Size = new System.Drawing.Size(350, 350);
+            this.evidenceGridControl1.Size = new System.Drawing.Size(466, 430);
             this.evidenceGridControl1.TabIndex = 13;
             this.evidenceGridControl1.ButtonClick += new System.EventHandler(this.evidenceGridControl1_ButtonClick);
+            this.evidenceGridControl1.Load += new System.EventHandler(this.evidenceGridControl1_Load);
             // 
             // fleetGridControl1
             // 
             this.fleetGridControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fleetGridControl1.Enabled = false;
-            this.fleetGridControl1.Location = new System.Drawing.Point(35, 60);
+            this.fleetGridControl1.Location = new System.Drawing.Point(47, 74);
+            this.fleetGridControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.fleetGridControl1.Name = "fleetGridControl1";
-            this.fleetGridControl1.Size = new System.Drawing.Size(350, 350);
+            this.fleetGridControl1.Size = new System.Drawing.Size(466, 430);
             this.fleetGridControl1.TabIndex = 12;
             // 
             // VerifyPlacementButton
             // 
-            this.VerifyPlacementButton.Location = new System.Drawing.Point(103, 426);
+            this.VerifyPlacementButton.Location = new System.Drawing.Point(137, 524);
+            this.VerifyPlacementButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VerifyPlacementButton.Name = "VerifyPlacementButton";
-            this.VerifyPlacementButton.Size = new System.Drawing.Size(124, 23);
+            this.VerifyPlacementButton.Size = new System.Drawing.Size(165, 28);
             this.VerifyPlacementButton.TabIndex = 14;
             this.VerifyPlacementButton.Text = "Verify placement";
             this.VerifyPlacementButton.UseVisualStyleBackColor = true;
@@ -167,9 +181,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1045, 567);
             this.Controls.Add(this.VerifyPlacementButton);
             this.Controls.Add(this.EvidenceLabel);
             this.Controls.Add(this.evidenceGridControl1);
@@ -183,6 +197,7 @@
             this.Controls.Add(this.enemyLastTargetLabel);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.PlaceFleetButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Battleship";
             this.ResumeLayout(false);

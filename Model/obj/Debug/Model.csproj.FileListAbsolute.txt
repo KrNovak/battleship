@@ -1,0 +1,18 @@
+C:\Users\Dell\source\repos\Battleship\Model\bin\Debug\Model.dll
+C:\Users\Dell\source\repos\Battleship\Model\bin\Debug\Model.pdb
+C:\Users\Dell\source\repos\Battleship\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Battleship\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Battleship\Model\obj\Debug\Model.dll
+C:\Users\Dell\source\repos\Battleship\Model\obj\Debug\Model.pdb
+C:\Users\Dell\Desktop\battleship\Model\bin\Debug\Model.dll
+C:\Users\Dell\Desktop\battleship\Model\bin\Debug\Model.pdb
+C:\Users\Dell\Desktop\battleship\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\battleship\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\battleship\Model\obj\Debug\Model.dll
+C:\Users\Dell\Desktop\battleship\Model\obj\Debug\Model.pdb
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\bin\Debug\Model.dll
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\bin\Debug\Model.pdb
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\obj\Debug\Model.dll
+C:\Users\Danijel\Downloads\battleship (1)\battleship\Model\obj\Debug\Model.pdb

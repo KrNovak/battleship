@@ -75,11 +75,13 @@ namespace Vsite.Oom.Battleship.Model
         private void ChangeToInlineTactics()
         {
             CurrentTactics = ShootingTactics.Inline;
+            currentShootingTactics = new InlineShooting(enemyGrid, squaresHit, shipsToShoot[0]);
         }
 
         private void ChangeToSurroundingTactics()
         {
             CurrentTactics = ShootingTactics.Surrounding;
+            currentShootingTactics = new SurrondingShooting(enemyGrid,squaresHit[0] ,shipsToShoot[0]);
         }
 
         private void ChangeToRandomTactics()

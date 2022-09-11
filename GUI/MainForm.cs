@@ -19,10 +19,10 @@ namespace GUI
         {
             InitializeComponent();
         }
-        private void CreateFleet()  //async
+        private void CreateFleet()  
         {
             myFleet = shipwright.CreateFleet();
-            Thread.Sleep(100); //da izbjegnem generiranje identičnih flota za oba igrača
+            Thread.Sleep(100); 
             gunnery = new Gunnery(10, 10, new int[] { 5, 4, 4, 3, 3, 3, 2, 2, 2, 2 });
             enemyFleet = shipwright.CreateFleet();
         }
@@ -33,19 +33,19 @@ namespace GUI
             return (T)ply.GetValue(rnd.Next(ply.Length));
         }
 
-        // WHEN START GAME BUTTON IS CLICKED
+       
         private void StartGame()
         {
             UpdateLabels();
-            playerOnMove = RandomEnumValue<CurrentPlayer>(); //odabir igrača
+            playerOnMove = RandomEnumValue<CurrentPlayer>();
             switch (playerOnMove)
             {
                 case CurrentPlayer.LivePerson:
-                    MessageBox.Show("You start first!", "Player selection"); //mi startmo klikom na evidenceGrid kontrolu
+                    MessageBox.Show("You start first!", "Player selection"); 
                     break;
                 case CurrentPlayer.Computer:
                     MessageBox.Show("Computer starts first!", "Player selection");
-                    ComputerShoots(); //poziv poteza računala
+                    ComputerShoots(); 
                     break;
                 default:
                     break;
@@ -56,11 +56,11 @@ namespace GUI
             //}
 
         }
-        // When player clicks on evidenceGrid
+      
         void HandleYourShot(int row, int column)
         {
             var hitResult = enemyFleet.Shoot(row, column);
-            //:depending on hit result colour corresponding button
+          
             switch (hitResult)
             {
                 case HitResult.Missed:
@@ -76,11 +76,12 @@ namespace GUI
                     --enemyShipsLeft;
                     UpdateLabels();
                     evidenceGridControl1.AnimateColor(row, column, Color.Red);
-                    if (enemyShipsLeft == 0) //uvjet za završiti igru
+                    MessageBox.Show("Ship sunken!");
+                    if (enemyShipsLeft == 0) 
                     {
                         MessageBox.Show("You won!", "Winner");
-                        ResetLabels(); //priprema za novu igru u istom prozoru
-                        //mySingleton = true;
+                        ResetLabels(); 
+                       
                         StartButton.Enabled = false;
                     }
                     break;
@@ -97,13 +98,13 @@ namespace GUI
                 var hitResult = myFleet.Shoot(square.Row, square.Column);
                 int adjust = square.Row + 1;
                 enemyLastTarget = ((char)(square.Column + 'A')).ToString() + "-" + adjust.ToString();
-                gunnery.ProcessShootingResult(hitResult); //try blok je zbog ove linije 2 su problema nakon pogodka premjeni stanje u surrounding 
-                                                          //no sljedeću iteraciju ga zaboravi i opet je na random to sam vas htio pitat u call-u
-                switch (hitResult)                        //druga stvar je da se RandomShooting class-i nakon jedno 30 iteracija dogodi 
-                {                                         //ArgumentOutOfRangeException linija 26: var index = random.Next(candidates.Count());
-                    case HitResult.Missed:                //dok igrate grešku ćete prepoznati kad računalo prestane pucati a mozete i maknit try blok
-                        fleetGridControl1.AnimateColor(square.Row, square.Column, Color.White);  //no ako pobjedite ponovo namistite flotu i krenete
-                        break;                                                                   // racunalo ce opet pucati dok nedode preljev
+                gunnery.ProcessShootingResult(hitResult); 
+                                                          
+                switch (hitResult)                        
+                {                                         
+                    case HitResult.Missed:               
+                        fleetGridControl1.AnimateColor(square.Row, square.Column, Color.White);  
+                        break;                                                                  
                     case HitResult.Hit:
                         --mySquaresLeft;
                         UpdateLabels();
@@ -115,11 +116,11 @@ namespace GUI
                         --myShipsLeft;
                         UpdateLabels();
                         fleetGridControl1.AnimateColor(square.Row, square.Column, Color.Red);
-                        if (myShipsLeft == 0) //uvjet za završiti igru
+                        if (myShipsLeft == 0) 
                         {
                             MessageBox.Show("Computer won!", "Winner");
-                            ResetLabels(); //pripremi stanje za newGame
-                            //mySingleton = true;
+                            ResetLabels(); 
+                            
                             StartButton.Enabled = false;
                         }
                         break;
@@ -151,11 +152,11 @@ namespace GUI
         }
 
         private static readonly Shipwright shipwright = new Shipwright(10, 10, new int[] {5, 4, 4, 3, 3, 3, 2, 2, 2, 2 });
-        private Gunnery gunnery; //kad pokeremo igru onda konstruktor pozvat
+        private Gunnery gunnery; 
         private Fleet enemyFleet; 
         private Fleet myFleet;
         static readonly Random rnd = new Random();
-        //private bool mySingleton = false; //ovo sam koristio u jednom od prethodnih rjesenja za CreateFleet()
+       
         private int mySquaresLeft = 30, enemySquaresLeft = 30;
         private int myShipsLeft = 10, enemyShipsLeft = 10;
         private string myLastTarget, enemyLastTarget;
@@ -178,12 +179,16 @@ namespace GUI
             {
                 evidenceGridControl1.PlaceFleet(enemyFleet);
             }
-            catch (System.NullReferenceException) //ovo se događa zbog uvođenja Task.Delay jer se naredba u try 
-            {                                     //ide pozvati dok je stvaranje enemyFleet u CreateFleet() delay-ano 
-            }                                     //no nakon isteka vremena sve radi i igra teče uredno
+            catch (System.NullReferenceException) 
+            {                                     
+            }                                     
 
         }
 
+        private void evidenceGridControl1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void VerifyPlacementButton_Click(object sender, EventArgs e)
         {
@@ -200,7 +205,7 @@ namespace GUI
         private void evidenceGridControl1_ButtonClick(object sender, EventArgs e)
         {
             UpdateLabels();
-            //GridButton button = sender as GridButton;
+           
             if (sender is GridButton button)
             {
                 int row = button.Row;
